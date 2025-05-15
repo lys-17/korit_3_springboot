@@ -16,8 +16,9 @@ public class Owner {
     private String firstname, lastname;
 
     @JsonIgnore
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")  //컬럼명 owner를 참조하여 ownerid에 맞는 자동차 목록을 가져옴
     private List<Car> cars;
+
 
     public Owner() {
     }
